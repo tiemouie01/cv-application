@@ -4,18 +4,16 @@ import General from "./components/General";
 import Resume from "./components/Resume";
 
 function App() {
-  const [generalInfo, setGeneralInfo] = useState({
-    name: "Pumpkin Miamba",
-    email: "wopwop@hotmail.com",
-    phone: "+265 997 288 584",
-  });
+  const [generalInfo, setGeneralInfo] = useState({});
 
   const handleGeneralInfo = (name, email, phone) => {
     setGeneralInfo({ name, email, phone });
   };
+
   return (
     <main>
       <General generalInfo={generalInfo} handler={handleGeneralInfo} />
+      <Resume generalInfo={generalInfo} />
     </main>
   );
 }
