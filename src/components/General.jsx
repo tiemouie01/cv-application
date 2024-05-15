@@ -46,7 +46,8 @@ const General = ({ generalInfo, handler }) => {
       </p>
       <button
         type="submit"
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault();
           handler(currentName, currentEmail, currentPhone);
         }}
       >
