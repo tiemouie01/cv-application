@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const Resume = ({ generalInfo }) => {    
+const Resume = ({ generalInfo }) => {
   return (
     <section>
       <article>
