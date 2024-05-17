@@ -18,7 +18,7 @@ function App() {
 
   return (
     <main>
-      <General generalInfo={generalInfo} handler={handleGeneralInfo} />
+      <General generalInfo={generalInfo} handleGeneralInfo={handleGeneralInfo} />
       <Education
         educationInfo={educationInfo}
         handleEducationInfo={handleEducationInfo}

@@ -1,61 +1,33 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
+import GeneralForm from "./GeneralForm";
 
-const General = ({ generalInfo, handler }) => {
-  const [currentName, setCurrentName] = useState(generalInfo.name);
-  const [currentEmail, setCurrentEmail] = useState(generalInfo.email);
-  const [currentPhone, setCurrentPhone] = useState(generalInfo.phone);
+const General = ({ generalInfo, handleGeneralInfo }) => {
+  const [filled, setFilled] = useState(false);
+  const name = generalInfo.name;
+  const email = generalInfo.email;
+  const phone = generalInfo.phone;
 
   return (
     <section>
       <h1>Personal Information</h1>
-      <form action="#">
-        <p>
-          <label htmlFor="name">Fullname: </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={currentName}
-            onChange={(e) => {
-              setCurrentName(e.target.value);
-            }}
-          />
-        </p>
-        <p>
-          <label htmlFor="mail">Email: </label>
-          <input
-            type="email"
-            name="mail"
-            id="mail"
-            value={currentEmail}
-            onChange={(e) => {
-              setCurrentEmail(e.target.value);
-            }}
-          />
-        </p>
-        <p>
-          <label htmlFor="phone-number">Phone Number: </label>
-          <input
-            type="text"
-            name="phone"
-            id="phone-number"
-            value={currentPhone}
-            onChange={(e) => {
-              setCurrentPhone(e.target.value);
-            }}
-          />
-        </p>
+      {filled ? (
         <button
-          type="submit"
-          onClick={(e) => {
-            e.preventDefault();
-            handler(currentName, currentEmail, currentPhone);
+          onClick={() => {
+            setFilled(false);
           }}
         >
-          Submit
+          Edit
         </button>
-      </form>
+      ) : (
+        <GeneralForm
+          name={name}
+          email={email}
+          phone={phone}
+          handleGeneralInfo={handleGeneralInfo}
+          setFilled={setFilled}
+        />
+      )}
     </section>
   );
 };
