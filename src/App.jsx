@@ -35,8 +35,8 @@ function App() {
   };
 
   return (
-    <main className="p-4 font-mono grid grid-cols-6">
-      <section className="col-span-2 p-2 space-y-4">
+    <main className="p-4 font-mono grid grid-cols-7">
+      <section className="col-span-3 p-2 space-y-4">
         <General
           generalInfo={generalInfo}
           handleGeneralInfo={handleGeneralInfo}

@@ -13,7 +13,7 @@ const Practical = ({ practicalInfo, handlePracticalInfo }) => {
   const endDate = practicalInfo.endDate;
 
   return (
-    <section className="p-4 rounded-xl shadow-xl border space-y-2 h-[480px]">
+    <section className="p-4 rounded-xl shadow-md border space-y-2 h-[480px]">
       <h1 className="text-2xl text-center font-semibold">
         Practical Experience Information
       </h1>
