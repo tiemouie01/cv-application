@@ -11,7 +11,7 @@ const Education = ({ educationInfo, handleEducationInfo }) => {
   const [filled, setFilled] = useState(false);
 
   return (
-    <section className="p-4 rounded-xl shadow-md border space-y-2 h-[300px]">
+    <section className="p-4 rounded-xl shadow-md border space-y-2">
       <h1 className="text-2xl text-center font-semibold">Educational Information</h1>
       <TransitionGroup>
         {filled ? (

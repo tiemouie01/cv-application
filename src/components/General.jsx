@@ -11,7 +11,7 @@ const General = ({ generalInfo, handleGeneralInfo }) => {
   const phone = generalInfo.phone;
 
   return (
-    <section className="p-4 rounded-xl shadow-md border space-y-2 h-[290px]">
+    <section className="p-4 rounded-xl shadow-md border space-y-2">
       <h1 className="text-2xl text-center font-semibold">
         Personal Information
       </h1>
