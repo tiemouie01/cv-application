@@ -9,10 +9,10 @@ const GeneralForm = ({ name, email, phone, handleGeneralInfo, setFilled }) => {
 
   return (
     <form action="#" className="space-y-3">
-      <p>
+      <p className="flex items-center gap-4">
         <label htmlFor="name">Name: </label>
         <input
-          className="border p-2 rounded"
+          className="border p-2 rounded flex-1"
           type="text"
           name="name"
           id="name"
@@ -22,26 +22,26 @@ const GeneralForm = ({ name, email, phone, handleGeneralInfo, setFilled }) => {
           }}
         />
       </p>
-      <p>
+      <p className="flex items-center gap-2">
         <label htmlFor="mail">Email: </label>
         <input
           type="email"
           name="mail"
           id="mail"
-          className="border p-2 rounded"
+          className="border p-2 rounded flex-1"
           value={currentEmail}
           onChange={(e) => {
             setCurrentEmail(e.target.value);
           }}
         />
       </p>
-      <p>
+      <p className="flex items-center gap-2">
         <label htmlFor="phone-number">Phone: </label>
         <input
           type="text"
           name="phone"
           id="phone-number"
-          className="border p-2 rounded"
+          className="border p-2 rounded flex-1"
           value={currentPhone}
           onChange={(e) => {
             setCurrentPhone(e.target.value);

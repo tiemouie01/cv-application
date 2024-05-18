@@ -19,26 +19,26 @@ const PracticalForm = ({
 
   return (
     <form action="#" className="space-y-3">
-      <p>
+      <p className="flex items-center gap-2">
         <label htmlFor="company">Company Name: </label>
         <input
           type="text"
           name="company"
           id="company"
-          className="border p-2 rounded"
+          className="border p-2 rounded flex-1"
           value={company}
           onChange={(e) => {
             setCompany(e.target.value);
           }}
         />
       </p>
-      <p>
+      <p className="flex items-center gap-2">
         <label htmlFor="position">Position Title: </label>
         <input
           type="text"
           name="position"
           id="position"
-          className="border p-2 rounded"
+          className="border p-2 rounded flex-1"
           value={position}
           onChange={(e) => {
             setPosition(e.target.value);
@@ -57,8 +57,8 @@ const PracticalForm = ({
           }}
         ></textarea>
       </p>
-      <p>
-        <label htmlFor="sdate">Start Date</label>
+      <p className="flex justify-center items-center">
+        <label htmlFor="sdate">Start Date: </label>
         <input
           type="date"
           name="sdate"
@@ -70,8 +70,8 @@ const PracticalForm = ({
           }}
         />
       </p>
-      <p>
-        <label htmlFor="edate">Start Date</label>
+      <p className="flex justify-center items-center">
+        <label htmlFor="edate">End Date: </label>
         <input
           type="date"
           name="edate"

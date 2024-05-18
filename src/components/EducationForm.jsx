@@ -15,12 +15,12 @@ const EducationForm = ({
 
   return (
     <form action="#" className="space-y-3">
-      <p>
+      <p className="flex items-center gap-2">
         <label htmlFor="school">School Name: </label>
         <input
           type="text"
           id="school"
-          className="border p-2 rounded"
+          className="border p-2 rounded flex-1"
           name="school"
           value={schoolName}
           onChange={(e) => {
@@ -28,12 +28,12 @@ const EducationForm = ({
           }}
         />
       </p>
-      <p>
+      <p className="flex items-center gap-2">
         <label htmlFor="prg">Programme: </label>
         <input
           type="text"
           name="programme"
-          className="border p-2 rounded"
+          className="border p-2 rounded flex-1"
           id="prg"
           value={programme}
           onChange={(e) => {
@@ -41,13 +41,13 @@ const EducationForm = ({
           }}
         />
       </p>
-      <p>
+      <p className="flex items-center gap-2">
         <label htmlFor="year">Year Completed: </label>
         <input
           type="text"
           name="year"
           id="year"
-          className="border p-2 rounded"
+          className="border p-2 rounded flex-1"
           value={completionYear}
           onChange={(e) => {
             setCompletionYear(e.target.value);
