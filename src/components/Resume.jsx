@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const Resume = ({ generalInfo, educationInfo, practicalInfo }) => {
   return (
-    <section className="fixed right-3 col-span-3 p-2 shadow-md font-sans border-4 border-indigo-950 bg-indigo-100 w-1/2">
+    <section className="lg:fixed lg:right-3 lg:w-1/2 p-2 shadow-md font-sans border-4 border-indigo-950 bg-indigo-100">
       <article className="p-4 text-center space-y-2 border-b-4 border-indigo-950">
         <h1 className="text-5xl font-bold">{generalInfo.name}</h1>
         <p className="text-lg">{generalInfo.email}</p>
