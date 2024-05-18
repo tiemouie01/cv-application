@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+import { useState } from "react";
+import { FaCheckCircle } from "react-icons/fa";
 
 const EducationForm = ({
   school,
@@ -13,12 +14,13 @@ const EducationForm = ({
   const [completionYear, setCompletionYear] = useState(year);
 
   return (
-    <form action="#">
+    <form action="#" className="space-y-3">
       <p>
         <label htmlFor="school">School Name: </label>
         <input
           type="text"
           id="school"
+          className="border p-2 rounded"
           name="school"
           value={schoolName}
           onChange={(e) => {
@@ -27,10 +29,11 @@ const EducationForm = ({
         />
       </p>
       <p>
-        <label htmlFor="prg">Programme of Study: </label>
+        <label htmlFor="prg">Programme: </label>
         <input
           type="text"
           name="programme"
+          className="border p-2 rounded"
           id="prg"
           value={programme}
           onChange={(e) => {
@@ -39,11 +42,12 @@ const EducationForm = ({
         />
       </p>
       <p>
-        <label htmlFor="year">Year of Completion</label>
+        <label htmlFor="year">Year Completed: </label>
         <input
           type="text"
           name="year"
           id="year"
+          className="border p-2 rounded"
           value={completionYear}
           onChange={(e) => {
             setCompletionYear(e.target.value);
@@ -52,13 +56,15 @@ const EducationForm = ({
       </p>
       <button
         type="submit"
+        className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded m-auto mt-3"
         onClick={(e) => {
           e.preventDefault();
           handleEducationInfo(schoolName, programme, completionYear);
           setFilled(true);
         }}
       >
-        Submit
+        Submit 
+        <FaCheckCircle />
       </button>
     </form>
   );
