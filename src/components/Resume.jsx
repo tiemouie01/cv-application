@@ -1,28 +1,33 @@
 /* eslint-disable react/prop-types */
 const Resume = ({ generalInfo, educationInfo, practicalInfo }) => {
   return (
-    <section>
-      <article>
-        <h1>{generalInfo.name}</h1>
-        <p>{generalInfo.email}</p>
+    <section className="col-span-4 p-2 shadow-lg font-sans border-4 border-indigo-950 bg-indigo-100">
+      <article className="p-4 text-center space-y-2 border-b-4 border-indigo-950">
+        <h1 className="text-5xl font-bold">{generalInfo.name}</h1>
+        <p className="text-lg">{generalInfo.email}</p>
         <p>{generalInfo.phone}</p>
       </article>
-      <article>
-        <h2>Educational Experience</h2>
+      <article className="p-4 space-y-2 border-b-4 border-indigo-950">
+        <h2 className="text-3xl font-semibold">Educational Experience</h2>
         <p>
-          School: {educationInfo.school}
-          <br />
-          Programme of Study: {educationInfo.programme} <br />
-          Year of Completion: {educationInfo.year}
+          School: <strong className="text-xl">{educationInfo.school}</strong>
+        </p>
+        <p>
+          Programme of Study:{" "}
+          <strong className="text-xl">{educationInfo.programme}</strong>{" "}
+        </p>
+        <p>
+          Year of Completion:{" "}
+          <strong className="text-xl">{educationInfo.year}</strong>
         </p>
       </article>
-      <article>
-        <h2>Practical Experience</h2>
-        <p>Company: {practicalInfo.companyName}</p>
-        <p>Position: {practicalInfo.positionTitle}</p>
-        <p>Responsibilities: {practicalInfo.responsibilities}</p>
-        <p>Start Date: {practicalInfo.startDate}</p>
-        <p>End Date: {practicalInfo.endDate}</p>
+      <article className="p-4 space-y-2">
+        <h2 className="text-3xl font-semibold">Practical Experience</h2>
+        <p>Company: <strong className="text-xl">{practicalInfo.companyName}</strong></p>
+        <p>Position: <strong className="text-xl">{practicalInfo.positionTitle}</strong></p>
+        <p>Responsibilities: <strong className="text-xl">{practicalInfo.responsibilities}</strong></p>
+        <p>Start Date: <strong className="text-xl">{practicalInfo.startDate}</strong></p>
+        <p>End Date: <strong className="text-xl">{practicalInfo.endDate}</strong></p>
       </article>
     </section>
   );
