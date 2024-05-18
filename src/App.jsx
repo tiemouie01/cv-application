@@ -35,8 +35,11 @@ function App() {
   };
 
   return (
-    <main className="p-4 font-mono xl:grid xl:grid-cols-7 sm:flex sm:flex-col">
-      <section className="xl:col-span-3 p-2 space-y-4">
+    <main className="p-4 font-mono lg:grid lg:grid-cols-7 sm:flex sm:flex-col"> 
+      <header className="lg:col-span-3 p-2">
+        <h1 className="text-center text-3xl font-bold font-sans border-4">CV Builder</h1>
+      </header>
+      <section className="lg:col-span-3 lg:col-start-1 p-2 space-y-4">
         <General
           generalInfo={generalInfo}
           handleGeneralInfo={handleGeneralInfo}
