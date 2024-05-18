@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import { FaCheckCircle } from "react-icons/fa";
 
 const GeneralForm = ({ name, email, phone, handleGeneralInfo, setFilled }) => {
   const [currentName, setCurrentName] = useState(name);
@@ -7,10 +8,11 @@ const GeneralForm = ({ name, email, phone, handleGeneralInfo, setFilled }) => {
   const [currentPhone, setCurrentPhone] = useState(phone);
 
   return (
-    <form action="#">
+    <form action="#" className="space-y-3">
       <p>
-        <label htmlFor="name">Fullname: </label>
+        <label htmlFor="name">Name: </label>
         <input
+          className="border p-2 rounded"
           type="text"
           name="name"
           id="name"
@@ -26,6 +28,7 @@ const GeneralForm = ({ name, email, phone, handleGeneralInfo, setFilled }) => {
           type="email"
           name="mail"
           id="mail"
+          className="border p-2 rounded"
           value={currentEmail}
           onChange={(e) => {
             setCurrentEmail(e.target.value);
@@ -33,11 +36,12 @@ const GeneralForm = ({ name, email, phone, handleGeneralInfo, setFilled }) => {
         />
       </p>
       <p>
-        <label htmlFor="phone-number">Phone Number: </label>
+        <label htmlFor="phone-number">Phone: </label>
         <input
           type="text"
           name="phone"
           id="phone-number"
+          className="border p-2 rounded"
           value={currentPhone}
           onChange={(e) => {
             setCurrentPhone(e.target.value);
@@ -46,6 +50,7 @@ const GeneralForm = ({ name, email, phone, handleGeneralInfo, setFilled }) => {
       </p>
       <button
         type="submit"
+        className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded m-auto mt-3"
         onClick={(e) => {
           e.preventDefault();
           handleGeneralInfo(currentName, currentEmail, currentPhone);
@@ -53,6 +58,7 @@ const GeneralForm = ({ name, email, phone, handleGeneralInfo, setFilled }) => {
         }}
       >
         Submit
+        <FaCheckCircle />
       </button>
     </form>
   );

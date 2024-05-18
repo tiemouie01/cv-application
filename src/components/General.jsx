@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+import { useState } from "react";
+import { FaRegPenToSquare } from "react-icons/fa6";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import GeneralForm from "./GeneralForm";
 
 const General = ({ generalInfo, handleGeneralInfo }) => {
@@ -9,25 +11,35 @@ const General = ({ generalInfo, handleGeneralInfo }) => {
   const phone = generalInfo.phone;
 
   return (
-    <section>
-      <h1>Personal Information</h1>
-      {filled ? (
-        <button
-          onClick={() => {
-            setFilled(false);
-          }}
-        >
-          Edit
-        </button>
-      ) : (
-        <GeneralForm
-          name={name}
-          email={email}
-          phone={phone}
-          handleGeneralInfo={handleGeneralInfo}
-          setFilled={setFilled}
-        />
-      )}
+    <section className="p-4 rounded-xl shadow-xl border space-y-2 h-[290px]">
+      <h1 className="text-2xl text-center font-semibold">
+        Personal Information
+      </h1>
+      <TransitionGroup>
+        {filled ? (
+          <CSSTransition key="editButton" timeout={500} classNames="fade">
+            <button
+              className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded m-auto"
+              onClick={() => {
+                setFilled(false);
+              }}
+            >
+              Edit
+              <FaRegPenToSquare />
+            </button>
+          </CSSTransition>
+        ) : (
+          <CSSTransition key="generalForm" timeout={500} classNames="fade">
+            <GeneralForm
+              name={name}
+              email={email}
+              phone={phone}
+              handleGeneralInfo={handleGeneralInfo}
+              setFilled={setFilled}
+            />
+          </CSSTransition>
+        )}
+      </TransitionGroup>
     </section>
   );
 };
