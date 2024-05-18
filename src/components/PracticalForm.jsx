@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import { FaCheckCircle } from "react-icons/fa";
 
 const PracticalForm = ({
   companyName,
@@ -17,13 +18,14 @@ const PracticalForm = ({
   const [eDate, setEndDate] = useState(endDate);
 
   return (
-    <form action="#">
+    <form action="#" className="space-y-3">
       <p>
         <label htmlFor="company">Company Name: </label>
         <input
           type="text"
           name="company"
           id="company"
+          className="border p-2 rounded"
           value={company}
           onChange={(e) => {
             setCompany(e.target.value);
@@ -36,17 +38,19 @@ const PracticalForm = ({
           type="text"
           name="position"
           id="position"
+          className="border p-2 rounded"
           value={position}
           onChange={(e) => {
             setPosition(e.target.value);
           }}
         />
       </p>
-      <p>
+      <p className="flex flex-col">
         <label htmlFor="resp">Responsibilities:</label>
         <textarea
           name="responisibilites"
           id="resp"
+          className="border p-2 rounded"
           value={respies}
           onChange={(e) => {
             setRespies(e.target.value);
@@ -59,6 +63,7 @@ const PracticalForm = ({
           type="date"
           name="sdate"
           id="sdate"
+          className="border p-2 rounded"
           value={sDate}
           onChange={(e) => {
             setStartDate(e.target.value);
@@ -71,6 +76,7 @@ const PracticalForm = ({
           type="date"
           name="edate"
           id="edate"
+          className="border p-2 rounded"
           value={eDate}
           onChange={(e) => {
             setEndDate(e.target.value);
@@ -79,6 +85,7 @@ const PracticalForm = ({
       </p>
       <button
         type="submit"
+        className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded m-auto mt-3"
         onClick={(e) => {
           e.preventDefault();
           handlePracticalInfo(company, position, respies, sDate, eDate);
@@ -86,6 +93,7 @@ const PracticalForm = ({
         }}
       >
         Submit
+        <FaCheckCircle />
       </button>
     </form>
   );
