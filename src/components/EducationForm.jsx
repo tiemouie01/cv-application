@@ -28,7 +28,7 @@ const EducationForm = ({
           }}
         />
       </p>
-      <p className="flex items-center gap-2">
+      <p className="flex flex-wrap items-center gap-2">
         <label htmlFor="prg">Programme: </label>
         <input
           type="text"
@@ -41,7 +41,7 @@ const EducationForm = ({
           }}
         />
       </p>
-      <p className="flex items-center gap-2">
+      <p className="flex flex-wrap items-center gap-2">
         <label htmlFor="year">Year Completed: </label>
         <input
           type="text"

@@ -19,7 +19,7 @@ const PracticalForm = ({
 
   return (
     <form action="#" className="space-y-3">
-      <p className="flex items-center gap-2">
+      <p className="flex flex-wrap items-center gap-2">
         <label htmlFor="company">Company Name: </label>
         <input
           type="text"
@@ -32,7 +32,7 @@ const PracticalForm = ({
           }}
         />
       </p>
-      <p className="flex items-center gap-2">
+      <p className="flex flex-wrap items-center gap-2">
         <label htmlFor="position">Position Title: </label>
         <input
           type="text"
